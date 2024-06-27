@@ -112,11 +112,11 @@
                             <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
-                            <a href="#" class="title">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </a>
+                            <a href="#" class="title">{{$video->name}}</a>
                             <a class="channel-name" href="#">{{$video->name}}<span>
                                     <i class="fa fa-check-circle"></i></span></a>
                             <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
-                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->create_at}}</span>
+                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}}</span>
                         </div>
                     </div>
                 </div>
@@ -137,11 +137,11 @@
                             <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
-                            <a href="#" class="title">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </a>
+                            <a href="#" class="title">{{$video->name}}</a>
                             <a class="channel-name" href="#">{{$video->name}}<span>
                                     <i class="fa fa-check-circle"></i></span></a>
                             <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
-                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->create_at}}</span>
+                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}}</span>
                         </div>
                     </div>
                 </div>
@@ -162,11 +162,11 @@
                             <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
-                            <a href="#" class="title">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ </a>
+                            <a href="#" class="title">{{$video->name}}</a>
                             <a class="channel-name" href="#">{{$video->name}}<span>
                                     <i class="fa fa-check-circle"></i></span></a>
                             <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
-                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->create_at}}</span>
+                            <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}}</span>
                         </div>
                     </div>
                 </div>
