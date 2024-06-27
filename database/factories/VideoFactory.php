@@ -23,7 +23,7 @@ class VideoFactory extends Factory
         return [
            'name'=>$persianFaker->name(),
             'url'=>$this->faker->imageUrl(640, 480, 'animals', true),
-            'length'=>rand(10,999),
+            'length'=>date(),
             'slug'=>$this->faker->slug(),
             'description'=>$persianFaker->text(),
             'thumbnail'=>'https://loremflickr.com/446/240/world?random='.rand(1,999),
