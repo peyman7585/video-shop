@@ -4,98 +4,98 @@
     {
       "name": "vite:load-fallback",
       "result": "$(document).ready(function () {\n\t\n    var length = $('#all-output').height() - $('#sidebar-stick').height() + $('#all-output').offset().top;\n\n    $(window).scroll(function () {\n\n        var scroll = $(this).scrollTop();\n        var height = $('#sidebar-stick').height() + 'px';\n\n        if (scroll < $('#all-output').offset().top) {\n\n            $('#sidebar-stick').css({\n                'position': 'absolute',\n                'top': '0'\n            });\n\n        } else if (scroll > length) {\n\n            $('#sidebar-stick').css({\n                'position': 'absolute',\n                'bottom': '0',\n                'top': 'auto'\n            });\n\n        } else {\n            $('#sidebar-stick').css({\n                'position': 'fixed',\n                'top': '0',\n            });\n        }\n    });\n});\n",
-      "start": 1719492583342,
-      "end": 1719492583344,
+      "start": 1719494465875,
+      "end": 1719494465877,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465877,
+      "end": 1719494465877,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     },
     {
       "name": "laravel",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1719492583344,
-      "end": 1719492583344,
+      "start": 1719494465878,
+      "end": 1719494465878,
       "order": "normal"
     }
   ]

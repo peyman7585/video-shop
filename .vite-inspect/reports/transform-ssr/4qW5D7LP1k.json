@@ -4,100 +4,100 @@
     {
       "name": "vite:load-fallback",
       "result": "import 'bootstrap';\r\n\r\n/**\r\n * We'll load the axios HTTP library which allows us to easily issue requests\r\n * to our Laravel back-end. This library automatically handles sending the\r\n * CSRF token as a header based on the value of the \"XSRF\" token cookie.\r\n */\r\n\r\nimport axios from 'axios';\r\nwindow.axios = axios;\r\n\r\nwindow.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';\r\n\r\n/**\r\n * Echo exposes an expressive API for subscribing to channels and listening\r\n * for events that are broadcast by Laravel. Echo and event broadcasting\r\n * allows your team to easily build robust real-time web applications.\r\n */\r\n\r\n// import Echo from 'laravel-echo';\r\n\r\n// import Pusher from 'pusher-js';\r\n// window.Pusher = Pusher;\r\n\r\n// window.Echo = new Echo({\r\n//     broadcaster: 'pusher',\r\n//     key: import.meta.env.VITE_PUSHER_APP_KEY,\r\n//     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER ?? 'mt1',\r\n//     wsHost: import.meta.env.VITE_PUSHER_HOST ?? `ws-${import.meta.env.VITE_PUSHER_APP_CLUSTER}.pusher.com`,\r\n//     wsPort: import.meta.env.VITE_PUSHER_PORT ?? 80,\r\n//     wssPort: import.meta.env.VITE_PUSHER_PORT ?? 443,\r\n//     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',\r\n//     enabledTransports: ['ws', 'wss'],\r\n// });\r\n",
-      "start": 1719492583342,
-      "end": 1719492583343,
+      "start": 1719494465875,
+      "end": 1719494465876,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "start": 1719492583343,
-      "end": 1719492583343,
+      "start": 1719494465876,
+      "end": 1719494465876,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1719492583343,
-      "end": 1719492583343,
+      "start": 1719494465876,
+      "end": 1719494465876,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1719492583343,
-      "end": 1719492583343,
+      "start": 1719494465876,
+      "end": 1719494465876,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1719492583343,
-      "end": 1719492583343,
+      "start": 1719494465876,
+      "end": 1719494465876,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import \"bootstrap\";\nimport axios from \"axios\";\nwindow.axios = axios;\nwindow.axios.defaults.headers.common[\"X-Requested-With\"] = \"XMLHttpRequest\";\n",
-      "start": 1719492583343,
-      "end": 1719492583363,
+      "start": 1719494465876,
+      "end": 1719494465897,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "laravel",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1719492583363,
-      "end": 1719492583363,
+      "start": 1719494465897,
+      "end": 1719494465897,
       "order": "normal"
     }
   ]

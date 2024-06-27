@@ -1,4 +1,6 @@
+import jQuery from "jquery";
 import("./assets/bootstrap-3z03NhBF.js");
+window.$ = jQuery;
 import("./assets/jquery-3.2.1.min-BR9rINuL.js");
 import("./assets/jquery.sticky-kit.min-Db-WkOqz.js");
 import("./assets/custom-Cgd8kHb1.js");
