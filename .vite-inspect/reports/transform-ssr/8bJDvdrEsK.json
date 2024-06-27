@@ -1,0 +1,102 @@
+{
+  "resolvedId": "C:\\laragon\\www\\lara-video-share\\resources\\js\\app.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import ('./bootstrap.js');\n\nimport('./jquery-3.2.1.min.js');\nimport('./jquery.sticky-kit.min.js');\nimport('./custom.js');\nimport('./bootstrap.min.js')\nimport('./imagesloaded.pkgd.min.js')\nimport('./grid-blog.min.js');\n\n\n\n\n\n\n",
+      "start": 1719492583327,
+      "end": 1719492583331,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css",
+      "start": 1719492583331,
+      "end": 1719492583331,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719492583331,
+      "end": 1719492583331,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719492583331,
+      "end": 1719492583332,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719492583332,
+      "end": 1719492583332,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719492583332,
+      "end": 1719492583332,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1719492583332,
+      "end": 1719492583332,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719492583332,
+      "end": 1719492583333,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719492583333,
+      "end": 1719492583333,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719492583333,
+      "end": 1719492583333,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719492583333,
+      "end": 1719492583333,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719492583333,
+      "end": 1719492583334,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719492583334,
+      "end": 1719492583334,
+      "order": "normal"
+    },
+    {
+      "name": "laravel",
+      "start": 1719492583334,
+      "end": 1719492583334,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719492583334,
+      "end": 1719492583335,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719492583335,
+      "end": 1719492583336,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "root": "C:/laragon/www/lara-video-share",
+  "modules": [
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/css/bootstrap.min.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:resolve (+alias)",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 0,
+      "sourceSize": 0,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/css/responsive.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:resolve (+alias)",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 0,
+      "sourceSize": 0,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/css/style.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:resolve (+alias)",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 0,
+      "sourceSize": 0,
+      "distSize": 0
+    }
+  ],
+  "ssrModules": [
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/bootstrap.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 1
+        },
+        {
+          "name": "vite:define",
+          "transform": 20
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 2
+        }
+      ],
+      "virtual": false,
+      "totalTime": 21,
+      "invokeCount": 1,
+      "sourceSize": 1269,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/bootstrap.min.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 3
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 3,
+      "invokeCount": 1,
+      "sourceSize": 37045,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/custom.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 3
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 3,
+      "invokeCount": 1,
+      "sourceSize": 817,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/grid-blog.min.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 7
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 7,
+      "invokeCount": 1,
+      "sourceSize": 23601,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/imagesloaded.pkgd.min.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 7
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 7,
+      "invokeCount": 1,
+      "sourceSize": 5473,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/jquery-3.2.1.min.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 6
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 6,
+      "invokeCount": 1,
+      "sourceSize": 86659,
+      "distSize": 0
+    },
+    {
+      "id": "C:/laragon/www/lara-video-share/resources/js/jquery.sticky-kit.min.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 2
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 2,
+      "invokeCount": 1,
+      "sourceSize": 809,
+      "distSize": 0
+    },
+    {
+      "id": "C:\\laragon\\www\\lara-video-share\\resources\\css\\app.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 4
+        },
+        {
+          "name": "vite:css",
+          "transform": 239
+        }
+      ],
+      "virtual": false,
+      "totalTime": 243,
+      "invokeCount": 1,
+      "sourceSize": 77,
+      "distSize": 0
+    },
+    {
+      "id": "C:\\laragon\\www\\lara-video-share\\resources\\js\\app.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 4
+        }
+      ],
+      "virtual": false,
+      "totalTime": 4,
+      "invokeCount": 1,
+      "sourceSize": 224,
+      "distSize": 0
+    }
+  ]
+}
