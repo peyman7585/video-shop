@@ -5,34 +5,36 @@
             <!-- upload -->
             <div class="col-md-8">
                 <h1 class="page-title"><span>آپلود</span> فیلم</h1>
-                <form>
+                <form action="/video" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <label>عنوان</label>
-                            <input type="text" class="form-control" placeholder="عنوان">
+                            <input type="text" name="name" class="form-control" placeholder="عنوان">
                         </div>
                         <div class="col-md-6">
-                            <label>دسته بندی</label>
-                            <input type="text" class="form-control" placeholder="دسته بندی">
+                            <label>مدت زمان</label>
+                            <input type="text" name="length" class="form-control" placeholder="مدت زمان">
                         </div>
                         <div class="col-md-6">
-                            <label>برچسب ها</label>
-                            <input type="text" class="form-control" placeholder="برچسب ها">
+                            <label>نام یکتا</label>
+                            <input type="text" name="slug" class="form-control" placeholder="نام یکتا">
                         </div>
                         <div class="col-md-6">
-                            <label>آپلود فیلم</label>
-                            <input id="upload_file" type="file" class="file">
+                            <label> آدرس ویدیو</label>
+                            <input type="text" name="url" class="form-control" placeholder="آدرس ویدیو">
                         </div>
+                        <div class="col-md-6">
+                            <label> تصویر بندانگشتی</label>
+                            <input type="text" name="thumbnail" class="form-control" placeholder="تصویر بندانگشتی ">
+                        </div>
+
                         <div class="col-md-12">
                             <label>توضیحات</label>
-                            <textarea class="form-control" rows="4"  placeholder="توضیح"></textarea>
+                            <textarea name="description" class="form-control" rows="4"  placeholder="توضیح"></textarea>
                         </div>
                         <div class="col-md-6">
-                            <label>تصویر</label>
-                            <input id="featured_image" type="file" class="file">
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" id="contact_submit" class="btn btn-dm">ذخیره</button>
+                            <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>
                         </div>
                     </div>
                 </form>
