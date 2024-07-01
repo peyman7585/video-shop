@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\storeVideoRequest;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -21,15 +22,9 @@ class VideoController extends Controller
         return view('videos.create');
     }
 
-    public function store(Request $request)
+    public function store(storeVideoRequest $request)
     {
-        $request->validate([
-            'name'=>['required'],
-            'slug'=>['required','unique:videos,slug'],
-            'thumbnail'=>['required','url'],
-            'length'=>['required','integer'],
-            'url'=>['required','url'],
-        ]);
+
         Video::create($request->all());
 
         return redirect()->route('index')->with('alert','عملایت با موفقیت انجام شد.');
