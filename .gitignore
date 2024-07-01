@@ -6,6 +6,8 @@
 /public/storage
 /storage/*.key
 /vendor
+/resources/lang/en
+/resources/lang/fa
 .env
 .env.backup
 .env.production
