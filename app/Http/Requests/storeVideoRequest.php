@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class storeVideoRequest extends FormRequest
 {
@@ -23,10 +24,17 @@ class storeVideoRequest extends FormRequest
     {
         return [
             'name'=>['required'],
-            'slug'=>['required','unique:videos,slug'],
+            'slug'=>['required','unique:videos,slug','alpha_dash'],
             'thumbnail'=>['required','url'],
             'length'=>['required','integer'],
             'url'=>['required','url'],
         ];
+    }
+
+    protected function prepareForValidation(): void
+    {
+        $this->merge([
+            'slug' => Str::slug($this->slug),
+        ]);
     }
 }
