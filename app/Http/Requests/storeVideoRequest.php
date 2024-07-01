@@ -31,6 +31,7 @@ class storeVideoRequest extends FormRequest
         ];
     }
 
+//in this case you can change Persian letter to english
     protected function prepareForValidation(): void
     {
         $this->merge([

@@ -10,8 +10,6 @@ use Illuminate\Http\Request;
 class VideoController extends Controller
 {
 
-
-
     public function index()
     {
         $videos=Video::all();
@@ -28,5 +26,12 @@ class VideoController extends Controller
         Video::create($request->all());
 
         return redirect()->route('index')->with('alert','عملایت با موفقیت انجام شد.');
+    }
+
+    public function show(Request $request,int $id){
+
+        $video=Video::find($id);
+
+        return view('videos.video-show',compact('video'));
     }
 }
