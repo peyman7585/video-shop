@@ -26,8 +26,8 @@ class Video extends Model
     }
 
 //accessor should be like Attribute in database
-    public function getLengthAttribute($value){
-        return gmdate('i:s',$value);
+    public function getLengthInHumenAttribute(){
+        return gmdate('i:s',$this->value);
     }
 
     public function getCreatedAtAttribute($value){
