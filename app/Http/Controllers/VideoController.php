@@ -28,9 +28,8 @@ class VideoController extends Controller
         return redirect()->route('index')->with('alert','عملایت با موفقیت انجام شد.');
     }
 
-    public function show(Request $request,int $id){
+    public function show(Request $request,Video $video){
 
-        $video=Video::find($id);
 
         return view('videos.video-show',compact('video'));
     }

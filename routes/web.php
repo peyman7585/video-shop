@@ -8,4 +8,4 @@ Route::get('/videos/create',[\App\Http\Controllers\VideoController::class,'creat
 
 Route::post('/video',[\App\Http\Controllers\VideoController::class,'store'])->name('videos.store');
 
-Route::get('/videos/{id}',[\App\Http\Controllers\VideoController::class,'show'])->name('videos.show');
+Route::get('/videos/{video}',[\App\Http\Controllers\VideoController::class,'show'])->name('videos.show');
