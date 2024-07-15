@@ -15,7 +15,7 @@
             <span class="views"><i class="fa fa-eye"></i>2.8M بازدید </span>
             <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}}</span>
 {{--            we can use (?) for nullable items (nullsafe)--}}
-            <span class="date"><i class="fa fa-tag"></i>{{$video->category?->name}}</span>
+            <span class="date"><i class="fa fa-tag"></i>{{$video->category_name}}</span>
         </div>
     </div>
 </div>

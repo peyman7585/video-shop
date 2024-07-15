@@ -28,6 +28,7 @@ class storeVideoRequest extends FormRequest
             'thumbnail'=>['required','url'],
             'length'=>['required','integer'],
             'url'=>['required','url'],
+            'category_id'=>['required','exists:categories,id']
         ];
     }
 
