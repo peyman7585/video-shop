@@ -17,6 +17,7 @@ class Video extends Model
             'url',
             'thumbnail',
             'description',
+            'category_id'
         ];
 
 

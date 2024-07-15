@@ -7,5 +7,6 @@ return [
     'url'=>'آدرس ویدیو',
     'thumbnail'=>'تصویر بندانگشتی ',
     'description'=>'توضیح هات',
+    'category'=>'دسته بندی ها'
 
 ];
