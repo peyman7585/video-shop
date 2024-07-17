@@ -20,4 +20,5 @@
                 <x-video-box :video="$video"></x-video-box>
             @endforeach
         </div>
+
     @endsection
