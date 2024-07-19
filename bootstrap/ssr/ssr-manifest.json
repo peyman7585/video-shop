@@ -1,24 +1,4 @@
 {
   "resources/js/app.js": [],
-  "resources/js/bootstrap.js": [
-    "/build/assets/bootstrap-3z03NhBF.js"
-  ],
-  "resources/js/bootstrap.min.js": [
-    "/build/assets/bootstrap.min-D2x1VFbh.js"
-  ],
-  "resources/js/custom.js": [
-    "/build/assets/custom-Cgd8kHb1.js"
-  ],
-  "resources/js/grid-blog.min.js": [
-    "/build/assets/grid-blog.min-B_iMe3iW.js"
-  ],
-  "resources/js/imagesloaded.pkgd.min.js": [
-    "/build/assets/imagesloaded.pkgd.min-DmstJGR6.js"
-  ],
-  "resources/js/jquery-3.2.1.min.js": [
-    "/build/assets/jquery-3.2.1.min-BR9rINuL.js"
-  ],
-  "resources/js/jquery.sticky-kit.min.js": [
-    "/build/assets/jquery.sticky-kit.min-Db-WkOqz.js"
-  ]
+  "resources/js/bootstrap.js": []
 }

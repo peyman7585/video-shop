@@ -1,9 +1,7 @@
-import jQuery from "jquery";
-import("./assets/bootstrap-3z03NhBF.js");
-window.$ = jQuery;
-import("./assets/jquery-3.2.1.min-BR9rINuL.js");
-import("./assets/jquery.sticky-kit.min-Db-WkOqz.js");
-import("./assets/custom-Cgd8kHb1.js");
-import("./assets/bootstrap.min-D2x1VFbh.js");
-import("./assets/imagesloaded.pkgd.min-DmstJGR6.js");
-import("./assets/grid-blog.min-B_iMe3iW.js");
+import "bootstrap";
+import axios from "axios";
+import Alpine from "alpinejs";
+window.axios = axios;
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+window.Alpine = Alpine;
+Alpine.start();
