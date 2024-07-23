@@ -19,9 +19,6 @@ Route::post('/videos/{video}',[\App\Http\Controllers\VideoController::class,'upd
 Route::get('/categories/{category:slug}/videos',[\App\Http\Controllers\CategoryVideoController::class,'index'])->name('categories.videos.index');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
