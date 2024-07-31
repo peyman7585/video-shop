@@ -35,6 +35,14 @@ class Video extends Model
         return (new Verta($value))->formatDifference();
     }
 
+    public function getOwnerNameAttribute(){
+        return $this->user?->name;
+    }
+
+    public function getOwnerAvatarAttribute(){
+        return $this->user?->gravatar;
+    }
+
     public function relateVideos(int $count){
         return $this->category->getRandomVideos($count);
     }
@@ -46,4 +54,11 @@ class Video extends Model
     public function getCategoryNameAttribute(){
         return $this->category?->name;
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }
