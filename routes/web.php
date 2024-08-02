@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 
+use App\Mail\VerfiyEmail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[\App\Http\Controllers\IndexController::class,'index'])->name('index');
@@ -27,3 +29,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::get('/email',function (){
+
+    $user= \App\Models\User::find(8);
+  Mail::to("mail@gmail.com")->send(new VerfiyEmail($user));
+
+});
