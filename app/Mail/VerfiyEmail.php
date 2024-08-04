@@ -41,8 +41,10 @@ class VerfiyEmail extends Mailable
     {
 
         return new Content(
-            view: 'emails.verify-email',
-            with:['user_name'=>$this->user->name]
+            markdown: 'emails.verify-email',
+            with: [
+                'url' => 'https://google.com'
+            ],
         );
     }
 
