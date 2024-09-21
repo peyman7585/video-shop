@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
 
 use App\Mail\VerfiyEmail;
+use App\Models\Video;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 Route::get('/',[\App\Http\Controllers\IndexController::class,'index'])->name('index');
 
@@ -33,6 +37,20 @@ require __DIR__ . '/auth.php';
 Route::get('/email',function (){
 
     $user= \App\Models\User::find(8);
-  Mail::to("mail@gmail.com")->send(new VerfiyEmail($user));
+  return new VerfiyEmail($user);
 
 });
+
+Route::get('/verfiy' , function (){
+    if(request()->hasValidSignature()){
+        echo 'verfiy';
+    }
+
+
+})->name('verfiy');
+
+Route::get('/generate', function (){
+    echo URL::temporarySignedRoute('verfiy',now()->addSecond(20),['value'=>123456]);
+});
+
+

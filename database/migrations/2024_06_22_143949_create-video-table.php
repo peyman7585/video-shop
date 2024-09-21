@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('url');
             $table->integer('length');
             $table->timestamps();
+
         });
     }
 
