@@ -37,7 +37,7 @@ require __DIR__ . '/auth.php';
 Route::get('/email',function (){
 
     $user= \App\Models\User::find(8);
-  return new VerfiyEmail($user);
+ Mail::to('abbaszadeh.85@gmail.com')->send(new VerfiyEmail($user));
 
 });
 
@@ -53,4 +53,6 @@ Route::get('/generate', function (){
     echo URL::temporarySignedRoute('verfiy',now()->addSecond(20),['value'=>123456]);
 });
 
-
+Route::get('/jobs',function (){
+    \App\Jobs\ProcessVideo::dispatch();
+});
