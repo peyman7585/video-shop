@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
 
+use App\Http\Middleware\ChechVerifyEmail;
 use App\Mail\VerfiyEmail;
 use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\URL;
 
 Route::get('/',[\App\Http\Controllers\IndexController::class,'index'])->name('index');
 
-Route::get('/videos/create',[\App\Http\Controllers\VideoController::class,'create'])->name('videos.create');
+Route::get('/videos/create',[\App\Http\Controllers\VideoController::class,'create'])->middleware(ChechVerifyEmail::class)->name('videos.create');
 
 Route::post('/video',[\App\Http\Controllers\VideoController::class,'store'])->name('videos.store');
 

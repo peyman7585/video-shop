@@ -3,14 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\ChechVerifyEmail;
 use App\Http\Requests\storeVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use App\Models\Category;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
 class VideoController extends Controller
 {
+
+
+
+
 
     public function index()
     {
