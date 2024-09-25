@@ -62,3 +62,9 @@ Route::get('/event', function (){
    \App\Events\VideoCreate::dispatch($video);
 
 });
+
+Route::get('/notification', function (){
+    $user=\App\Models\User::first();
+    $video=Video::first();
+    $user->notify(new \App\Notifications\VideoProcessed($video));
+});
