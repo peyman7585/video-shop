@@ -56,3 +56,9 @@ Route::get('/generate', function (){
 Route::get('/jobs',function (){
     \App\Jobs\ProcessVideo::dispatch();
 });
+
+Route::get('/event', function (){
+    $video=Video::first();
+   \App\Events\VideoCreate::dispatch($video);
+
+});
