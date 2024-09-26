@@ -14,6 +14,6 @@ class VideoSeeder extends Seeder
     public function run(): void
     {
         // you should use this command line for run *php artisan db:seed VideoSeeder* or you can call this class in databaseSeeder//
-        Video::factory()->count(15)->create();
+        Video::factory()->hasComments(4)->count(15)->create();
     }
 }
