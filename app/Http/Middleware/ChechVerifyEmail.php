@@ -19,6 +19,6 @@ class ChechVerifyEmail
         if ($request->user() && $request->user()->hasVerifiedEmail()){
             return $next($request);
         }
-        return redirect()->route('index')->with('alert','برای بهره مند شدن از تمامی امکانات سایت لطفا ایمیل خود را تایید کنید');
+        return redirect()->route('index')->with('alert',__('messages.please_verify_your_email'));
     }
 }
