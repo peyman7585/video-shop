@@ -15,7 +15,7 @@ class RelateVideos extends Component
      */
     public function __construct(Video $video)
     {
-        $this->videos=$video->relateVideos(10);
+        $this->videos=$video->relateVideos(10)->load('user');
     }
 
     /**

@@ -16,9 +16,6 @@ class VideoController extends Controller
 {
 
 
-
-
-
     public function index()
     {
 
@@ -35,17 +32,18 @@ class VideoController extends Controller
     public function store(storeVideoRequest $request)
     {
 
-
         $request->user()->videos()->create($request->all());
         return redirect()->route('index')->with('alert','عملایت با موفقیت انجام شد.');
     }
 
     public function show(Request $request,Video $video){
 
+        $video->load('comments.user');
         return view('videos.video-show',compact('video'));
     }
 
     public function edit(Video $video){
+
         $categories=Category::all();
         return view('videos.edit',compact('video','categories'));
     }
