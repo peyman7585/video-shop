@@ -73,3 +73,4 @@ Route::get('/notification', function (){
     $user->notify(new \App\Notifications\VideoProcessed($video));
 });
 
+Route::post('/videos/{video}/comments',[\App\Http\Controllers\CommentController::class,'store'])->name('comment.store');

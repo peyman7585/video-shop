@@ -1,6 +1,7 @@
 @extends('layouts')
 @section('content')
 <div class="row">
+    <x-validation-errors></x-validation-errors>
     <!-- Watch -->
     <div class="col-md-8">
         <div id="watch">
@@ -75,15 +76,14 @@
                     @endforeach
                 </ul>
 
-
+                @auth()
                 <h3 class="post-box-title">ارسال نظرات</h3>
-                <form>
-                    <input type="text" class="form-control" id="Name" placeholder="نام">
-                    <input type="email" class="form-control" id="Email" placeholder="ایمیل">
-                    <input type="text" class="form-control" placeholder="سایت">
-                    <textarea class="form-control" rows="8" id="Message" placeholder="پیام"></textarea>
-                    <button type="button" id="contact_submit" class="btn btn-dm">ارسال پیام</button>
+                <form method="POST" action="{{route('comment.store',$video)}}">
+                  @csrf
+                    <textarea class="form-control" rows="8" id="Message"  name="body" placeholder="پیام"></textarea>
+                    <button type="submit"  class="btn btn-dm">ارسال پیام</button>
                 </form>
+                @endauth
             </div>
             <!-- // Comments -->
 

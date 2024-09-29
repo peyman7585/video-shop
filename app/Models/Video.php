@@ -52,7 +52,7 @@ class Video extends Model
     }
 
     public function getCategoryNameAttribute(){
-        return $this->category?->name;
+        return $this->category->load('user')->name;
     }
 
     public function user()
@@ -62,7 +62,7 @@ class Video extends Model
 
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class)->orderBy('created_at','desc');
     }
 
 }
