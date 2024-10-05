@@ -8,7 +8,9 @@ use App\Mail\VerfiyEmail;
 use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 
 Route::get('/',[\App\Http\Controllers\IndexController::class,'index'])->name('index');
@@ -78,3 +80,12 @@ Route::post('/videos/{video}/comments',[\App\Http\Controllers\CommentController:
 Route::get('{likeable_type}/{likeable_id}/like',[\App\Http\Controllers\LikeController::class,'store'])->name('like.store');
 
 Route::get('{likeable_type}/{likeable_id}/dislike',[\App\Http\Controllers\DislikeController::class,'store'])->name('dislike.store');
+
+Route::get('/file',function (){
+   return Storage::download('contracts/test3.jpg');
+//    return response()->file(storage_path('app/contracts/test.jpg'));
+//    $contents = Storage::get('contracts/test2.jpg');
+//     return Response::make($contents)->header('content-type','image/jpeg');
+
+
+});
