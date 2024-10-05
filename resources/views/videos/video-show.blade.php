@@ -11,7 +11,7 @@
             <div class="video-code">
                 <video controls style="height: 100%; width: 100%;">
                     <source
-                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        src="{{$video->video_url}}"
                         type="video/mp4">
                 </video>
             </div><!-- // video-code -->

@@ -87,5 +87,4 @@ Route::get('/file',function (){
 //    $contents = Storage::get('contracts/test2.jpg');
 //     return Response::make($contents)->header('content-type','image/jpeg');
 
-
 });

@@ -11,6 +11,7 @@ use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
@@ -31,6 +32,10 @@ class VideoController extends Controller
 
     public function store(storeVideoRequest $request)
     {
+       $path =Storage::putFile('videos',$request->file);
+        $request->merge([
+            'url'=>$path
+        ]);
 
         $request->user()->videos()->create($request->all());
         return redirect()->route('index')->with('alert','عملایت با موفقیت انجام شد.');
@@ -48,7 +53,12 @@ class VideoController extends Controller
         return view('videos.edit',compact('video','categories'));
     }
 
-    public function update(UpdateVideoRequest $request,Video $video){
+    public function update(Request $request,Video $video){
+
+        $path =Storage::putFile('videos',$request->file);
+        $request->merge([
+            'url'=>$path
+        ]);
 
         $video->update($request->all());
 

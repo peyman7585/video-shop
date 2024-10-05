@@ -44,6 +44,11 @@ class Video extends Model
         return $this->user?->gravatar;
     }
 
+    public function getVideoUrlAttribute()
+    {
+        return  '/storage/'.$this->url;
+    }
+
     public function relateVideos(int $count){
         return $this->category->getRandomVideos($count);
     }
