@@ -34,7 +34,7 @@ class VideoController extends Controller
     {
        $path =Storage::putFile('videos',$request->file);
         $request->merge([
-            'url'=>$path
+            'path'=>$path
         ]);
 
         $request->user()->videos()->create($request->all());
@@ -53,12 +53,15 @@ class VideoController extends Controller
         return view('videos.edit',compact('video','categories'));
     }
 
-    public function update(Request $request,Video $video){
+    public function update(UpdateVideoRequest $request,Video $video){
 
-        $path =Storage::putFile('videos',$request->file);
-        $request->merge([
-            'url'=>$path
-        ]);
+        if($request->hasFile('file')){
+            $path =Storage::putFile('videos',$request->file);
+            $request->merge([
+                'path'=>$path
+            ]);
+        }
+
 
         $video->update($request->all());
 

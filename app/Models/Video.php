@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use App\Models\Traits\Likeable;
+use App\Observers\VideoObserver;
 use Hekmatinasser\Verta\Verta;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+#[ObservedBy([VideoObserver::class])]
 class Video extends Model
 {
     use HasFactory,Likeable;
@@ -15,7 +18,7 @@ class Video extends Model
             'name',
             'length',
             'slug',
-            'url',
+            'path',
             'thumbnail',
             'description',
             'category_id'
@@ -46,7 +49,7 @@ class Video extends Model
 
     public function getVideoUrlAttribute()
     {
-        return  '/storage/'.$this->url;
+        return  '/storage/'.$this->path;
     }
 
     public function relateVideos(int $count){
