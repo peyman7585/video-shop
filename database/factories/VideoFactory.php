@@ -23,8 +23,8 @@ class VideoFactory extends Factory
         $persianFaker= \Faker\Factory::create('fa_IR');
         return [
            'name'=>$persianFaker->name(),
-            'url'=>$this->faker->imageUrl(640, 480, 'animals', true),
-            'length'=>date('s'),
+            'path'=>$this->faker->imageUrl(640, 480, 'animals', true),
+            'length'=>$this->faker->unixTime(),
             'slug'=>$this->faker->slug(),
             'description'=>$persianFaker->text(),
             'thumbnail'=>'https://loremflickr.com/446/240/world?random='.rand(1,999),

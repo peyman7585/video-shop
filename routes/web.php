@@ -88,3 +88,4 @@ Route::get('/file',function (){
 //     return Response::make($contents)->header('content-type','image/jpeg');
 
 });
+
