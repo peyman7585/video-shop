@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Filters\VideoFilters;
 use App\Models\Traits\Likeable;
 use App\Observers\VideoObserver;
 use Hekmatinasser\Verta\Verta;
@@ -9,6 +10,8 @@ use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use function PHPUnit\TestFixture\func;
 
 
 #[ObservedBy([VideoObserver::class])]
@@ -80,34 +83,8 @@ class Video extends Model
     public function scopeFilter(Builder $builder ,array $params)
     {
 
-        if (isset($params['length']) && $params['length'] == 1)
-        {
-            $builder->where('length','<',60);
-        }
-        if (isset($params['length']) && $params['length'] == 2)
-        {
-            $builder->whereBetween('length',[60,300]);
-        }
-        if (isset($params['length']) && $params['length'] == 3)
-        {
-            $builder->where('length','>',300);
-        }
+        return (new VideoFilters($builder))->apply($params);
 
-        return $builder;
     }
 
-
-    public function scopeSort(Builder $builder, array $params)
-    {
-        if(isset($params['sortBy']) && $params['sortBy'] == 'length')
-        {
-            $builder->orderBy('length','desc');
-        }
-        if(isset($params['sortBy']) && $params['sortBy'] == 'created_at')
-        {
-            $builder->orderBy('created_at','desc');
-        }
-
-        return $builder;
-    }
 }
