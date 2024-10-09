@@ -7,6 +7,7 @@ use App\Http\Middleware\ChechVerifyEmail;
 use App\Mail\VerfiyEmail;
 use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -87,4 +88,10 @@ Route::get('/file',function (){
 //    $contents = Storage::get('contracts/test2.jpg');
 //     return Response::make($contents)->header('content-type','image/jpeg');
 
+});
+
+Route::get('gate-test',function (){
+
+    Gate::allows('test');
+   dd('hi');
 });

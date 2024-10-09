@@ -13,7 +13,9 @@ use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
+
 
 class VideoController extends Controller
 {
@@ -34,6 +36,7 @@ class VideoController extends Controller
 
     public function store(storeVideoRequest $request)
     {
+
        $path =Storage::putFile('videos',$request->file);
         $request->merge([
             'path'=>$path
@@ -44,19 +47,20 @@ class VideoController extends Controller
     }
 
     public function show(Request $request,Video $video){
-
+//        Gate::authorize('update', $video);
         $video->load('comments.user');
         return view('videos.video-show',compact('video'));
     }
 
     public function edit(Video $video){
 
+        Gate::authorize('update', $video);
         $categories=Category::all();
         return view('videos.edit',compact('video','categories'));
     }
 
     public function update(UpdateVideoRequest $request,Video $video){
-
+        Gate::authorize('update', $video);
         if($request->hasFile('file')){
             $path =Storage::putFile('videos',$request->file);
             $request->merge([
@@ -69,6 +73,8 @@ class VideoController extends Controller
 
         return redirect()->route('videos.show',$video->slug)->with('alert','ویدیو شما با موفقیت اپدیت شد.');
     }
+
+
 
 
 }

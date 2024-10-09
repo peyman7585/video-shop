@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Comment;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Gate;
 
 class StoreCommentRequest extends FormRequest
 {
@@ -11,7 +13,7 @@ class StoreCommentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+       return $this->user()->can('create',[Comment::class,$this->video]);
     }
 
     /**

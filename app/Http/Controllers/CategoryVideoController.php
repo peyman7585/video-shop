@@ -14,7 +14,6 @@ class CategoryVideoController extends Controller
         $videos=$category
             ->videos()
             ->filter($request->all())
-            ->sort($request->all())
             ->paginate()
             ->withQueryString() ;
         $title=$category->name;

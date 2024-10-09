@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\User;
 use App\Models\Video;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -28,7 +29,8 @@ class VideoFactory extends Factory
             'slug'=>$this->faker->slug(),
             'description'=>$persianFaker->text(),
             'thumbnail'=>'https://loremflickr.com/446/240/world?random='.rand(1,999),
-            'category_id'=>Category::first() ?? Category::factory()
+            'category_id'=>Category::first() ?? Category::factory(),
+            'user_id' =>User::factory()
         ];
     }
 }
