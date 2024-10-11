@@ -7,6 +7,8 @@ use App\Http\Middleware\ChechVerifyEmail;
 use App\Mail\VerfiyEmail;
 use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
@@ -94,4 +96,13 @@ Route::get('gate-test',function (){
 
     Gate::allows('test');
    dd('hi');
+});
+
+Route::get('/cache',function (){
+    $value = Cache::remember('video_count', 10, function () {
+        sleep(3);
+        return Video::all()->count();
+
+    });
+
 });

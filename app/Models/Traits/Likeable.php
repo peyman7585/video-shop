@@ -4,6 +4,7 @@ namespace App\Models\Traits;
 
 use App\Models\Like;
 use App\Models\User;
+use Illuminate\Support\Facades\Cache;
 
 trait Likeable
 {
@@ -14,16 +15,23 @@ trait Likeable
 
     public function getLikesCountAttribute()
     {
-        return $this->likes()
-            ->where('vote',1)
-            ->count();
+        $like_counter_key='like_counter_key'.class_basename($this).'_'.$this->id;
+     return  Cache::remember($like_counter_key,10 ,function (){
+            return $this->likes()
+                ->where('vote',1)
+                ->count();
+        });
+
     }
 
     public function getDisLikesCountAttribute()
     {
-        return $this->likes()
-            ->where('vote',-1)
-            ->count();
+        $dislike_counter_key='dislike_counter_key'.class_basename($this).'_'.$this->id;
+       return Cache::remember($dislike_counter_key,10 ,function (){
+            return $this->likes()
+                ->where('vote',-1)
+                ->count();
+        });
     }
 
     public function likeby (User $user)
