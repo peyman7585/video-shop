@@ -8,6 +8,7 @@ use App\Http\Requests\storeVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use App\Models\Category;
 use App\Models\Video;
+use App\Services\VideoService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
@@ -36,13 +37,8 @@ class VideoController extends Controller
 
     public function store(storeVideoRequest $request)
     {
+        (new VideoService)->create($request->user(),$request->all());
 
-       $path =Storage::putFile('videos',$request->file);
-        $request->merge([
-            'path'=>$path
-        ]);
-
-        $request->user()->videos()->create($request->all());
         return redirect()->route('index')->with('alert','عملایت با موفقیت انجام شد.');
     }
 
@@ -59,22 +55,9 @@ class VideoController extends Controller
         return view('videos.edit',compact('video','categories'));
     }
 
-    public function update(UpdateVideoRequest $request,Video $video){
-        Gate::authorize('update', $video);
-        if($request->hasFile('file')){
-            $path =Storage::putFile('videos',$request->file);
-            $request->merge([
-                'path'=>$path
-            ]);
-        }
-
-
-        $video->update($request->all());
-
+    public function update(UpdateVideoRequest $request,Video $video)
+    {
+        (new VideoService)->update($video,$request->all());
         return redirect()->route('videos.show',$video->slug)->with('alert','ویدیو شما با موفقیت اپدیت شد.');
     }
-
-
-
-
 }

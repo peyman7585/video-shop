@@ -29,6 +29,7 @@ class Video extends Model
             'category_id'
         ];
 
+    protected $appends=['owner_name'];
     public function getRouteKeyName()
     {
         return 'slug';
