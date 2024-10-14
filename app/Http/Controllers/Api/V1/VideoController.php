@@ -40,4 +40,12 @@ class VideoController extends Controller
             'message'=>'your video updated'
         ],200);
     }
+
+    public function destroy(Video $video)
+    {
+        $video->delete();
+        return response()->json([
+            'message'=>'video deleted'
+        ],200);
+    }
 }

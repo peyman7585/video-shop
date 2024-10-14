@@ -33,7 +33,8 @@ class VideoObserver
      */
     public function deleted(video $video): void
     {
-        //
+        if($video->trashed()) return ;
+        Storage::delete($video->path);
     }
 
     /**
@@ -49,6 +50,6 @@ class VideoObserver
      */
     public function forceDeleted(video $video): void
     {
-        //
+        Storage::delete($video->path);
     }
 }
