@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Video;
 use App\Services\VideoService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class VideoController extends Controller
 {
@@ -25,7 +26,7 @@ class VideoController extends Controller
 
     public function store (storeVideoRequest $request )
     {
-        (new VideoService)->create(User::first(),$request->all());
+        (new VideoService)->create(auth()->user(),$request->all());
 
         return response()->json([
             'message'=>'your video created'
@@ -34,6 +35,7 @@ class VideoController extends Controller
 
     public function update (UpdateVideoRequest $request , Video $video)
     {
+      Gate::authorize('update', $video);
         (new VideoService)->update($video,$request->all());
 
         return response()->json([
