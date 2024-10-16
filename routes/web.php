@@ -1,5 +1,6 @@
 <?php
 
+use App\Exceptions\InvalidTypeException;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
 
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -104,5 +106,7 @@ Route::get('/cache',function (){
         return Video::all()->count();
 
     });
-
+});
+Route::get('log',function (){
+  throw new InvalidTypeException('this is textssws');
 });
